@@ -12,7 +12,7 @@ define('THEME_ASSETS', THEME_URI . '/assets');
 define('ADMIN_AJAX_URL', admin_url('admin-ajax.php'));
 define('HOME_URL', home_url('/'));
 define('FAVICON', THEME_ASSETS . '/images/favicon.png');
-define('FAVICON_ADMIN', THEME_URI . '/inc/assets/images/favicon.png');
+define('FAVICON_ADMIN', THEME_URI . '/inc/assets/images/favicon.ico');
 define('LOGO_LOGIN_ADMIN', THEME_URI . '/inc/assets/images/logo-admin.png');
 define('LOGO_LOGIN_ADMIN_W', THEME_URI . '/inc/assets/images/logo-admin-w.svg');
 define('SCREEN_SHOT', THEME_URI . '/screenshot.png?v=' . date('dmY'));
