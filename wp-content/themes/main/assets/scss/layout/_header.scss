@@ -1,11 +1,19 @@
 .main-header {
     @include position(fixed, 0, 0, auto, 0);
-    height: p(96);
+    height: p(70);
     background-color: #ffffff;
     box-shadow: 0px 20px 8px rgba(0, 0, 0, 0.01), 0px 11px 7px rgba(0, 0, 0, 0.03), 0px 5px 5px rgba(0, 0, 0, 0.04), 0px 1px 3px rgba(0, 0, 0, 0.05), 0px 0px 0px rgba(0, 0, 0, 0.05);
     z-index: 100;
     padding: 0 p(60);
     @include flexBox(center, space-between, row);
+    .main-logo{
+        a{
+            display: inline-block;
+            img{
+                width: p(60);
+            }
+        }
+    }
     .main-menu{
         height: 100%;
         ul{
@@ -43,6 +51,14 @@
                         height: p(3);
                     }
                 }
+
+                a{
+                    color: rgba(0, 0, 0, 0.85);
+                    font-family: "sofia-semibold.ttf";
+                    font-size: p(15);
+                    line-height: p(22);
+                    text-transform: uppercase
+                }
             }
         }
     }
@@ -54,6 +70,62 @@
             margin: 0;
             background: transparent;
             margin-right: p(24);
+            cursor: pointer;
+            img{
+                width: p(20);
+            }
+        }
+        .language{
+            position: relative;
+            &:hover {
+                ul {
+                    opacity: 1;
+                    visibility: visible
+                }
+            }
+            .flag{
+                @include flexBox(center, center, row);
+                cursor: pointer;
+                span{
+                    margin-right: p(4);
+                    font-family: "sofia-semibold.ttf";
+                    font-size: p(14);
+                    line-height: p(22);
+                    text-transform: uppercase;
+                }
+                img{
+                    width: p(6);
+                }
+            }
+            ul{
+                position: absolute;
+                top: 30px;
+                right: 0;
+                background: #ffffff;
+                @include flexBox(flex-start, flex-start, column);
+                box-shadow: 0px 10px 12px 3px #322f2f30;
+                opacity: 0;
+                visibility: hidden;
+                transition: .3s;
+                li {
+                    a {
+                        font-family: "sofia-semibold.ttf";
+                        font-size: p(12);
+                        line-height: p(30);
+                        text-transform: uppercase;
+                        opacity: .6;
+                        width: p(35);
+                        height: p(35);
+                        display: inline-block;
+                        text-align: center;
+                    }
+                    &.current-lang{
+                        a{
+                            opacity: 1;
+                        }
+                    }
+                }
+            }
         }
     }
 }

@@ -1,3 +1,19 @@
 .tw-title {
-   
+    &.center {
+        text-align: center;
+    }
+    p {
+        font-family: "sofia-semibold.ttf";
+        font-size: p(12);
+        line-height: p(22);
+        text-transform: uppercase;
+        color: #BB1A21;
+    }
+    h2 {
+        font-family: "utm-alter-gothic.ttf";
+        font-size: p(40);
+        line-height: p(50);
+        text-transform: uppercase;
+        color: rgba(0, 0, 0, 0.85);
+    }
 }

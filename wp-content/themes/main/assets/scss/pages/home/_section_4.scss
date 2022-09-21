@@ -1,0 +1,19 @@
+.h-section-4 {
+    padding: p(120) 0;
+    .typical-projects {
+        margin-top: p(48);
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-column-gap: p(24);
+        grid-row-gap: p(32);
+        .typical-project-item{
+            &:nth-of-type(3n){
+                margin-right: 0;
+            }
+        }
+    }
+    .control{
+        text-align: center;
+        margin-top: p(48);
+    }
+}
