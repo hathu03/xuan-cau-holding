@@ -1,3 +1,59 @@
 .main-header {
-    
+    @include position(fixed, 0, 0, auto, 0);
+    height: p(96);
+    background-color: #ffffff;
+    box-shadow: 0px 20px 8px rgba(0, 0, 0, 0.01), 0px 11px 7px rgba(0, 0, 0, 0.03), 0px 5px 5px rgba(0, 0, 0, 0.04), 0px 1px 3px rgba(0, 0, 0, 0.05), 0px 0px 0px rgba(0, 0, 0, 0.05);
+    z-index: 100;
+    padding: 0 p(60);
+    @include flexBox(center, space-between, row);
+    .main-menu{
+        height: 100%;
+        ul{
+            display: flex;
+            @include flexBox(center, space-between, row);
+            height: 100%;
+            li{
+                margin-right: p(45);
+                height: 100%;
+                @include flexBox(center, center);
+                position: relative;
+                &:last-child{
+                    margin-right: 0;
+                }
+                &::after{
+                    content: "";
+                    position: absolute;
+                    bottom: 0;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    width: 0;
+                    background: #BB1A21;
+                    height: 0;
+                    transition: .3s;
+                }
+                &.current-menu-item{
+                    &::after{
+                        width: 120%;
+                        height: p(3);
+                    }
+                }
+                &:hover{
+                    &::after{
+                        width: 120%;
+                        height: p(3);
+                    }
+                }
+            }
+        }
+    }
+    .search-language{
+        @include flexBox(center, center, row);
+        button{
+            border: none;
+            padding: 0;
+            margin: 0;
+            background: transparent;
+            margin-right: p(24);
+        }
+    }
 }

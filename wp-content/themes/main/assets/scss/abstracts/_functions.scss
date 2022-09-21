@@ -1,5 +1,5 @@
 @function p($size) {
-    @return ($size/1920 * 100vw);
+    @return ($size/1440 * 100vw);
 }
 
 @function m($size) {
