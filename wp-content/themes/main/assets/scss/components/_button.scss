@@ -1,0 +1,61 @@
+.tw-button {
+    background-color: $primary-color;
+    border: none;
+    padding: 9px 48px 8px;
+    color: #ffffff !important;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 170%;
+    color: #FFFFFF;
+    display: inline-block;
+
+    border: none;
+    outline: none;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    transition: .3s;
+    &:before {
+        content: '';
+        background: linear-gradient(45deg, #E0BA57, #FDDE7D, #BF972C, #A17404, #A17404, #BF972C, #FDDE7D, #E0BA57 );
+        position: absolute;
+        top: -2px;
+        left:-2px;
+        background-size: 400%;
+        z-index: -1;
+        filter: blur(5px);
+        width: calc(100% + 4px);
+        height: calc(100% + 4px);
+        animation: glowing 20s linear infinite;
+        opacity: 0;
+        transition: opacity .3s ease-in-out;
+    }
+    &:active {
+        color: #000
+    }
+    &:active:after {
+        background: transparent;
+    }
+    &:after {
+        z-index: -1;
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+    }
+    &:hover:before {
+        opacity: 1;
+    }
+
+    &:hover{
+        background: linear-gradient(45deg, #E0BA57 29.79%, #FDDE7D 51.04%, #BF972C 68.86%, #A17404 101.5%);
+    }
+
+    @keyframes glowing {
+        0% { background-position: 0 0; }
+        50% { background-position: 400% 0; }
+        100% { background-position: 0 0; }
+    }
+}

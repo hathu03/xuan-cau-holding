@@ -1,0 +1,21 @@
+// -----------------------------------------------------------------------------
+// This file contains all @font-face declarations, if any.
+// -----------------------------------------------------------------------------
+
+@import '../abstracts/variables';
+
+$fonts: "sofia-regular.ttf" "sofia-light.ttf" "sofia-medium.ttf" "sofia-black.ttf" "sofia-bold.ttf" "sofia-extra-light.ttf" "sofia-semibold.ttf" "sofia-ultra-light.ttf" "utm-alter-gothic.ttf";
+//$fonts: null; // no fonts
+
+@if $fonts {
+    @each $font in $fonts {
+        @font-face {
+            font-family: "#{$font}";
+            src: url("#{$font-url}/#{$font}") format("truetype");
+            font-weight: normal;
+            font-style: normal;
+            font-display: swap;
+        }
+    }
+}
+//font-family: "sofia-regular.ttf";
