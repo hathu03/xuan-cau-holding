@@ -53,7 +53,7 @@ class MainCore
     public function enqueue()
     {
         //libs css
-        wp_enqueue_style('styles', THEME_URI . '/style.css');
+        wp_enqueue_style('styles', THEME_URI . '/style.min.css');
         wp_enqueue_style('toastr', 'https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css');
         wp_enqueue_style('swiper', 'https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css');
         wp_enqueue_style('fancybox', 'https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css');
@@ -63,8 +63,8 @@ class MainCore
         wp_enqueue_script('swiper', 'https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js', array('jquery'), false, true);
         wp_enqueue_script('fancybox', 'https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js', array('jquery'), false, true);
         wp_enqueue_script('wow', THEME_URI . '/assets/js/wow.min.js', array('jquery'), false, true);
-        wp_enqueue_script('validator', THEME_URI . '/assets/js/scripts/form-validation.min.js', array('jquery'), false, true);
-        wp_enqueue_script('scripts', THEME_URI . '/assets/js/scripts/scripts.min.js', array('jquery'), false, true);
+        wp_enqueue_script('validator', THEME_URI . '/assets/js/compressor/form-validation.min.js', array('jquery'), false, true);
+        wp_enqueue_script('scripts', THEME_URI . '/assets/js/compressor/scripts.min.js', array('jquery'), false, true);
         $wp_script_data = array(
             'AJAX_URL' => ADMIN_AJAX_URL,
             'HOME_URL' => HOME_URL

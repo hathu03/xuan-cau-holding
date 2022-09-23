@@ -1,0 +1,21 @@
+.h-section-6 {
+    padding: p(120) 0;
+    .logo-partner {
+        margin-top: p(48);
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        grid-column-gap: p(103);
+        grid-row-gap: p(24);
+        .logo-item {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: p(140);
+            img {
+                width: p(140);
+                height: p(140);
+            }
+        }
+    }
+}

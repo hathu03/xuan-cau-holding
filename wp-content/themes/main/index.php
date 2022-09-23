@@ -12,6 +12,6 @@ get_template_part( 'template-parts/home/section7' );
 get_template_part( 'template-parts/home/section8' );
 get_template_part( 'template-parts/home/section9' );
 ?>
-<script src="<?php echo THEME_ASSETS . '/js/scripts/home.js' ?>"></script>
+<script src="<?php echo THEME_ASSETS . '/js/compressor/home.min.js' ?>"></script>
 <?php
 get_footer();

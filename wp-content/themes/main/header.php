@@ -72,6 +72,6 @@ if (is_paged()) {
     <?php //wp_body_open(); ?>
     <div id="page" class="site-container">
         <header id="header-main">
-            <?php get_template_part('template-parts/header/menu', 'main'); ?>
+            <?php get_template_part('template-parts/headers/header', 'main'); ?>
         </header>
         <div id="content" class="site-content">

@@ -1,0 +1,54 @@
+.form-ft {
+    width: 100%;
+    .form-ft-register {
+        width: 100%;
+        .form-group {
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-bottom: p(67);
+            .form-input {
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+                position: relative;
+                margin-bottom: p(40);
+                padding-bottom: p(8);
+                border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+                &.invalid {
+                    span.form-message {
+                        color: #d72027;
+                        display: inline;
+                    }
+                }
+                label.form-label {
+                    white-space: nowrap;
+                    margin-right: p(10);
+                }
+                input {
+                    width: 100%;
+                    background-color: transparent;
+                    border: none;
+                    color: #ffffff;
+                    height: p(26);
+                    margin-top: p(3);
+                }
+                span.form-message {
+                    position: absolute;
+                    right: 0;
+                    bottom: p(-24);
+                    font-size: p(12);
+                    line-height: p(18);
+                    font-style: italic;
+                    font-family: "sofia-light.ttf";
+                    display: none;
+                }
+                &:nth-of-type(2), &:nth-of-type(3) {
+                    width: p(240);
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,82 @@
+.footer-main {
+    background: #1E1E1E;
+    color: #ffffff;
+    .ft {
+        padding: p(104) 0;
+        .context {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-column-gap: p(100);
+            font-size: p(14);
+            line-height: p(21);
+            h4.title {
+                font-family: "utm-alter-gothic.ttf";
+                font-size: p(24);
+                line-height: p(36);
+                text-transform: uppercase;
+                margin-bottom: p(40);
+            }
+            .contact {
+                .info {
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                    grid-row-gap: p(36);
+                    grid-column-gap: p(68);
+                    .contact-item {
+                        .label {
+                            margin-bottom: p(12);
+                            font-family: "sofia-semibold.ttf";
+                            font-size: p(16);
+                            line-height: p(24);
+                        }
+                        .address {
+                            margin-bottom: p(10);
+                        }
+                        .phone-fax {
+                            p {
+                                img {
+                                    margin-right: p(6);
+                                    display: inline;
+                                    width: p(12);
+                                    height: p(12);
+                                }
+                                a {
+                                    color: #D72027;
+                                }
+                            }
+                        }
+                        ul {
+                            li {
+                                margin-bottom: 6px;
+                                a {
+                                    color: #ffffff;
+                                }
+                            }
+                        }
+                        .social {
+                            a {
+                                display: inline-block;
+                                margin-right: p(8);
+                                img {
+                                    width: p(32);
+                                    height: p(32);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .copyright {
+        background-color: #000000;
+        padding: p(7) p(15) p(3);
+        p {
+            text-align: center;
+            color: #ffffff;
+            a{
+                color: #D72027;
+            }
+        }
+    }
+}

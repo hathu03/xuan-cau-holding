@@ -3,7 +3,7 @@
     <?php FormCommon::security();?>
 </form>
 <footer id="colophon" class="site-footer">
-	<?php get_template_part( 'template-parts/footer/footer', 'main' ); ?>
+	<?php get_template_part( 'template-parts/footers/footer', 'main' ); ?>
 </footer>
 
 </div><!-- #page -->

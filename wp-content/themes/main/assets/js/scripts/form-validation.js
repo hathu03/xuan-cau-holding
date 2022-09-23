@@ -4,7 +4,7 @@
  * @method Validator
  * @param {*} options
  */
-const Validator = (options) => {
+ const Validator = (options) => {
   let selectorRules = {};
   const formElement = document.querySelector(options.form);
 

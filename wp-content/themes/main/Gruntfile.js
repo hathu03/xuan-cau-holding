@@ -67,7 +67,7 @@ module.exports = function (grunt) {
                     expand: true,
                     cwd: 'assets/js/scripts/',
                     src: ['*.js', '!*min.js'],
-                    dest: 'assets/js/scripts/',
+                    dest: 'assets/js/compressor/',
                     ext: '.min.js'
                 }]
             }

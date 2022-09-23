@@ -25,7 +25,9 @@
                 ?>
             </div>
             <div class="control">
-                <a href="#" class="tw-button-primary">Xem thêm</a>
+                <a href="#" class="tw-button-primary">
+                    <span>Xem thêm</span>
+                </a>
             </div>
         </div>
     </div>

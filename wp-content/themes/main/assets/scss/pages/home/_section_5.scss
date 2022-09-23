@@ -1,0 +1,12 @@
+.h-section-5 {
+    background: #F5F5F5;
+    padding: p(120) 0 p(100);
+    .context {
+        .section-header {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: flex-end;
+        }
+    }
+}

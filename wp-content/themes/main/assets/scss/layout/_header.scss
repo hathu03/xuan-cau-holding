@@ -113,16 +113,11 @@
                         font-size: p(12);
                         line-height: p(30);
                         text-transform: uppercase;
-                        opacity: .6;
                         width: p(35);
                         height: p(35);
                         display: inline-block;
                         text-align: center;
-                    }
-                    &.current-lang{
-                        a{
-                            opacity: 1;
-                        }
+                        color: rgba(0,0,0,.5);
                     }
                 }
             }

@@ -73,6 +73,12 @@
     color: rgba(0, 0, 0, 0.65);
     img{
         margin-right: 8px;
+        transition: .3s;
+    }
+    &:hover{
+        img{
+            transform: rotate(180deg);
+        }
     }
 }
 
@@ -86,13 +92,14 @@
     line-height: p(26);
     font-family: "utm-alter-gothic.ttf";
     color: #FFFFFF;
+    // background-color: #BB1A21;
 
     border-color: #BB1A21;
     box-shadow: 0 0 40px 40px #BB1A21 inset, 0 0 0 0 #BB1A21;
     transition: all 150ms ease-in-out;
-  
+
     &:hover {
-        box-shadow: 0 0 10px 0 #bb1a21 inset, 0 0 10px 4px #bb1a21;
+        box-shadow: 0 0 2px 0 #bb1a21 inset, 0 0 10px 4px #bb1a21;
         color: #BB1A21;
         border-radius: 10px;
     }
