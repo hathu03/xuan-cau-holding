@@ -1,12 +1,33 @@
 .h-section-5 {
     background: #F5F5F5;
+    background-image: url("#{$img-url}/commons/h-s5-bg.png");
+    background-position: right bottom;
+    background-size: 100% 100%;
     padding: p(120) 0 p(100);
     .context {
-        .section-header {
+        .h-news-header {
             display: flex;
             flex-direction: row;
             justify-content: space-between;
             align-items: flex-end;
+            margin-bottom: p(28);
+        }
+        .h-news-content {
+            @include flexBox(flex-start, space-between, row);
+            h3.label {
+                font-family: "utm-alter-gothic.ttf";
+                font-size: p(20);
+                line-height: p(30);
+                text-transform: uppercase;
+                color: rgba(44, 45, 49, 0.85);
+                margin-bottom: p(20);
+            }
+            .featured-news {
+                width: p(792);
+            }
+            .latest-news{
+                width: p(333);
+            }
         }
     }
 }

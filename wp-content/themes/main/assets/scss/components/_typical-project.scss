@@ -4,10 +4,20 @@
     background-color: #BB1A21;
     display: block;
     position: relative;
+    overflow: hidden;
+    &:hover{
+        img.icon-plus {
+            transform: rotate(180deg);
+        }
+        img.picture {
+            transform: scale(1.1);
+        }
+    }
     img.picture{
         width: 100%;
         height: 100%;
         object-fit: cover;
+        transition: .3s
     }
     .info{
         @include position(absolute, auto, 0, 0, 0);
@@ -24,6 +34,9 @@
             font-size: p(24);
             line-height: p(32);
             margin-bottom: p(16);
+        }
+        img.icon-plus {
+            transition: .3s;
         }
     }
     &::before{

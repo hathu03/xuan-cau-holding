@@ -1,0 +1,117 @@
+.h-section-3 {
+    @include flexBox(flex-start, flex-start, row);
+    .title-box {
+        padding: p(120) p(27) p(0) p(120);
+        width: p(300);
+        height: p(640);
+        background-image: url('#{$img-url}/commons/h-s2-bg-title.jpg');
+        background-position: center;
+        background-size: cover;
+    }
+    .activity-list {
+        width: p(1140);
+        position: relative;
+        .swiper-slide {
+            display: block;
+            height: p(640);
+            position: relative;
+            overflow: hidden;
+            &::before {
+                content: "";
+                background: linear-gradient(180deg, rgba(0, 0, 0, 0) 62.66%, #000000 117.4%);
+                z-index: 1;
+                @include position(absolute, 0, 0, 0, 0)
+            }
+            &:hover {
+                .picture {
+                    transform: scale(1.1);
+                }
+                img.icon-plus {
+                    transform: rotate(180deg);
+                }
+            }
+            .picture {
+                width: 100%;
+                height: 100%;
+                transition: .3s;
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    object-position: center;
+                }
+            }
+            .info{
+                @include position(absolute, auto, 0, 0, 0);
+                z-index: 2;
+                padding: p(22) p(24);
+                color: #ffffff;
+                font-family: "sofia-bold.ttf";
+                p {
+                    font-size: p(20);
+                    line-height: p(24);
+                    margin-bottom: p(4);
+                }
+                h3 {
+                    font-size: p(24);
+                    line-height: p(32);
+                    margin-bottom: p(16);
+                }
+                img.icon-plus {
+                    transition: .3s;
+                }
+            }
+        }
+
+        .swiper-control-activity {
+            position: absolute;
+            left: p(-30);
+            z-index: 10;
+            top: 50%;
+            transform: translateY(-50%);
+            .swiper-pagination {
+                position: unset;
+                width: p(60);
+                height: p(60);
+                background-color: #ffffff;
+                font-family: "sofia-bold.ttf";
+                font-size: p(16);
+                line-height: p(30);
+                @include flexBox(center, center, row);
+                color: #D92027;
+                border-radius: 50%;
+                .swiper-pagination-current {
+                    margin-right: p(2);
+                }
+                .swiper-pagination-total {
+                    margin-left: p(2);
+                }
+            }
+
+            .swiper-button-prev, .swiper-button-next {
+                &::after {
+                    content: none;
+                }
+                width: p(18);
+                height: p(18);
+                top: 50%;
+                transform: translateY(-50%);
+                margin: 0 !important;
+                img {
+                    width: p(18);
+                    height: p(18);
+                }
+            }
+
+            .swiper-button-prev {
+                left: p(-30);
+                right: auto;
+            }
+
+            .swiper-button-next {
+                right: p(-30);
+                left: auto;
+            }
+        }
+    }
+}

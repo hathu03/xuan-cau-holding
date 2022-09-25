@@ -9,14 +9,14 @@
                 <?php
                     for ($i = 0; $i < 6; $i++) {
                         $url = HOME_URL;
-                        $image =  THEME_ASSETS . '/images/homes/s4-image.jpg';
+                        $thumbnail =  THEME_ASSETS . '/images/homes/s4-image.jpg';
                         $title =  'Nhà máy điện mặt trời Dầu Tiếng ' . ($i + 1);
                         get_template_part(
                             'template-parts/components/typical-project',
                             'item',
                             [
                                 'url' => $url,
-                                'image' => $image,
+                                'thumbnail' => $thumbnail,
                                 'index' => $i + 1,
                                 'title' => $title
                             ]
