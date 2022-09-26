@@ -6,16 +6,29 @@
     z-index: 100;
     padding: 0 p(60);
     @include flexBox(center, space-between, row);
+    @include MB {
+        height: m(40);
+        padding: 0 m(30);
+    }
+    @include MB768 {
+        height: m(45);
+    }
     .main-logo{
         a{
             display: inline-block;
             img{
                 width: p(60);
+                @include MB {
+                    width: m(35);
+                }
             }
         }
     }
     .main-menu{
         height: 100%;
+        @include MB768 {
+            display: none;
+        }
         ul{
             display: flex;
             @include flexBox(center, space-between, row);
@@ -25,6 +38,9 @@
                 height: 100%;
                 @include flexBox(center, center);
                 position: relative;
+                @include MB {
+                    margin-right: m(16);
+                }
                 &:last-child{
                     margin-right: 0;
                 }
@@ -57,7 +73,11 @@
                     font-family: "sofia-semibold.ttf";
                     font-size: p(15);
                     line-height: p(22);
-                    text-transform: uppercase
+                    text-transform: uppercase;
+                    @include MB {
+                        font-size: m(7);
+                        line-height: m(13);
+                    }
                 }
             }
         }
@@ -73,6 +93,12 @@
             cursor: pointer;
             img{
                 width: p(20);
+                @include MB {
+                    width: m(10.5);
+                }
+                @include MB768 {
+                    width: m(14);
+                }
             }
         }
         .language{
@@ -92,14 +118,28 @@
                     font-size: p(14);
                     line-height: p(22);
                     text-transform: uppercase;
+                    @include MB {
+                        font-size: m(7);
+                        line-height: m(13)
+                    }
+                    @include MB768 {
+                        font-size: m(11);
+                        line-height: m(13)
+                    }
                 }
                 img{
                     width: p(6);
+                    @include MB {
+                        width: m(5);
+                    }
+                    @include MB768 {
+                        width: m(6);
+                    }
                 }
             }
             ul{
                 position: absolute;
-                top: 30px;
+                top: p(22.3);
                 right: 0;
                 background: #ffffff;
                 @include flexBox(flex-start, flex-start, column);
@@ -107,17 +147,56 @@
                 opacity: 0;
                 visibility: hidden;
                 transition: .3s;
+                @include MB {
+                    top: m(13.3)
+                }
                 li {
                     a {
                         font-family: "sofia-semibold.ttf";
                         font-size: p(12);
-                        line-height: p(30);
+                        line-height: p(35);
                         text-transform: uppercase;
                         width: p(35);
                         height: p(35);
                         display: inline-block;
                         text-align: center;
                         color: rgba(0,0,0,.5);
+                        @include MB {
+                            width: m(20);
+                            height: m(20);
+                            font-size: m(7);
+                            line-height: m(20);
+                        }
+                        @include MB768 {
+                            width: m(28);
+                            height: m(28);
+                            font-size: m(10);
+                            line-height: m(28);
+                        }
+                    }
+                }
+            }
+        }
+
+        .hamburger {
+            display: none;
+            @include MB768 {
+                display: block;
+                margin-left: p(24);
+                width: m(23);
+                padding: m(2);
+                display: flex;
+                flex-direction: column;
+                align-items: flex-end;
+                span {
+                    width: 100%;
+                    height: 2.5px;
+                    display: block;
+                    background: rgba(0, 0, 0, 0.85);
+                    margin-bottom: p(8.5);
+                    &:last-child {
+                        margin-bottom: 0;
+                        width: 55%;
                     }
                 }
             }

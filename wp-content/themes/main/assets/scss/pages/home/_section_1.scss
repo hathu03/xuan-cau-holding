@@ -30,13 +30,15 @@
             position: absolute;
             z-index: 10;
             top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
+            left: 0;
+            transform: translateY(-50%);
             color: #ffffff;
             text-align: center;
             font-family: "utm-alter-gothic.ttf";
             letter-spacing: 0.02em;
             text-transform: uppercase;
+            width: 100%;
+            text-align: center;
             .text-large{
                 font-size: p(200);
                 line-height: p(250);
@@ -46,12 +48,21 @@
                 -webkit-text-fill-color: transparent;
                 background-clip: text;
                 text-fill-color: transparent;
+                @include MB {
+                    font-size: m(94);
+                    line-height: m(118);
+                }
             }
             .text-small{
                 font-size: p(60);
                 line-height: p(64);
                 text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
                 margin-top: p(-24);
+                @include MB {
+                    font-size: m(28);
+                    line-height: m(30);
+                    margin-top: m(-15);
+                }
             }
         }
     }

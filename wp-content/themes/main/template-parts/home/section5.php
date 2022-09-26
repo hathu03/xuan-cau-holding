@@ -35,7 +35,14 @@
                         <div class="list-featured">
                             <?php
                                 if($featured -> have_posts()){
-                                    get_template_part('template-parts/components/news/swiper', 'card', ['featuredPosts' => $featured]);
+                                    get_template_part(
+                                        'template-parts/components/news/swiper',
+                                        'card',
+                                        [
+                                            'id' => 'swiper-featured-news',
+                                            'featuredPosts' => $featured,
+                                        ]
+                                    );
                                 }
                             ?>
                         </div>

@@ -1,5 +1,5 @@
 
-<div class="tw-swiper-cart-news" id="swiper-featured-news">
+<div class="tw-swiper-cart-news" id="<?php echo $args['id'] ?? 'swiper-news' ?>">
     <div class="swiper">
         <div class="swiper-wrapper">
             <?php

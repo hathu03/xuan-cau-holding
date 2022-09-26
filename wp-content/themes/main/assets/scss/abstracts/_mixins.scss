@@ -75,6 +75,12 @@ $xxl: "only screen and (min-width: 1200px)";
     }
 }
 
+@mixin PC768 {
+    @media (min-width: 768px) {
+        @content;
+    }
+}
+
 @mixin PC {
     @media (min-width: 1025px) {
         @content;
@@ -83,6 +89,12 @@ $xxl: "only screen and (min-width: 1200px)";
 
 @mixin MB576 {
     @media (max-width: 576px) {
+        @content;
+    }
+}
+
+@mixin MB768 {
+    @media (max-width: 768px) {
         @content;
     }
 }

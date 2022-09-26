@@ -3,9 +3,5 @@
 }
 
 @function m($size) {
-    @return ($size/428 * 100vw);
-}
-
-@function m576($size) {
     @return ($size/576 * 100vw);
 }
