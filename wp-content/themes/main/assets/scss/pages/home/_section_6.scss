@@ -1,20 +1,50 @@
 .h-section-6 {
     padding: p(120) 0;
+    @include MB576 {
+        padding: m375(80) 0;
+    }
     .logo-partner {
         margin-top: p(48);
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
         grid-column-gap: p(103);
         grid-row-gap: p(24);
+        @include MB768 {
+            grid-column-gap: m(20);
+            grid-row-gap: m(12);
+        }
+        @include MB576 {
+            grid-column-gap: m375(36);
+            grid-row-gap: m375(24);
+            margin-top: m375(36);
+            grid-template-columns: 1fr 1fr 1fr;
+        }
         .logo-item {
             display: flex;
             align-items: center;
             justify-content: center;
             width: 100%;
             height: p(140);
+            @include MB768 {
+                height: m(80);
+            }
+            @include MB576 {
+                width: m375(80);
+                height: m375(80);
+            }
             img {
                 width: p(140);
                 height: p(140);
+                object-fit: contain;
+                object-position: center;
+                @include MB768 {
+                    width: m(80);
+                    height: m(80);
+                }
+                @include MB576 {
+                    width: m375(80);
+                    height: m375(80);
+                }
             }
         }
     }

@@ -5,6 +5,9 @@
         @include MB {
             padding: 0 m(30)
         }
+        @include MB576 {
+            padding: 0 m375(30)
+        }
     }
 }
 

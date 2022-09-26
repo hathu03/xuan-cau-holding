@@ -53,7 +53,7 @@ class MainCore
     public function enqueue()
     {
         //libs css
-        wp_enqueue_style('styles', THEME_URI . '/style.min.css');
+        wp_enqueue_style('styles', THEME_URI . '/style.css');
         wp_enqueue_style('toastr', 'https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css');
         wp_enqueue_style('swiper', 'https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css');
         wp_enqueue_style('fancybox', 'https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css');

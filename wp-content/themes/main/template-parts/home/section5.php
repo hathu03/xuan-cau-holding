@@ -58,6 +58,11 @@
                         </div>
                     </div>
                 </div>
+                <div class="h-news-control">
+                    <a href="#" class="tw-button-primary">
+                        <span>Xem tất cả</span>
+                    </a>
+                </div>
             </div>
         </div>
     </div>

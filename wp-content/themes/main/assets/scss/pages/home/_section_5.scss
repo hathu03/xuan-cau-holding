@@ -4,6 +4,9 @@
     background-position: right bottom;
     background-size: 100% 100%;
     padding: p(120) 0 p(100);
+    @include MB576 {
+        padding: m375(80) 0;
+    }
     .context {
         .h-news-header {
             display: flex;
@@ -11,9 +14,24 @@
             justify-content: space-between;
             align-items: flex-end;
             margin-bottom: p(28);
+            @include MB {
+                margin-bottom: m(18);
+            }
+            @include MB576 {
+                justify-content: center;
+                margin-bottom: m375(32);
+            }
+            .tw-button-primary {
+                @include MB576 {
+                    display: none
+                }
+            }
         }
         .h-news-content {
             @include flexBox(flex-start, space-between, row);
+            @include MB576 {
+                @include flexBox(flex-start, flex-start, column);
+            }
             h3.label {
                 font-family: "utm-alter-gothic.ttf";
                 font-size: p(20);
@@ -21,12 +39,48 @@
                 text-transform: uppercase;
                 color: rgba(44, 45, 49, 0.85);
                 margin-bottom: p(20);
+                @include MB {
+                    font-size: m(11);
+                    line-height: m(15);
+                }
+                @include MB576 {
+                    font-size: m375(20);
+                    line-height: m375(30);
+                    margin-bottom: m375(18);
+                }
             }
             .featured-news {
                 width: p(792);
+                @include MB {
+                    width: m(373);
+                }
+                @include MB768 {
+                    width: m(350)
+                }
+                @include MB576 {
+                    width: 100%;
+                    margin-bottom: m375(48);
+                }
             }
             .latest-news{
                 width: p(333);
+                @include MB {
+                    width: m(120);
+                }
+                @include MB768 {
+                    width: m(138)
+                }
+                @include MB576 {
+                    width: 100%;
+                }
+            }
+        }
+        .h-news-control {
+            display: none;
+            @include MB576 {
+                display: block;
+                text-align: center;
+                margin-top: m375(40);
             }
         }
     }

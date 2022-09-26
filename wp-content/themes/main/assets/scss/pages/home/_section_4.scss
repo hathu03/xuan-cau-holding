@@ -1,11 +1,23 @@
 .h-section-4 {
     padding: p(120) 0;
+    @include MB576 {
+        padding: m375(80) 0;
+    }
     .typical-projects {
         margin-top: p(48);
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         grid-column-gap: p(24);
         grid-row-gap: p(32);
+        @include MB {
+            grid-column-gap: m(16);
+            grid-row-gap: m(13);
+        }
+        @include MB576 {
+            grid-template-columns: 1fr;
+            grid-row-gap: m375(20);
+            margin-top: m375(36);
+        }
         .typical-project-item{
             &:nth-of-type(3n){
                 margin-right: 0;
@@ -15,5 +27,8 @@
     .control{
         text-align: center;
         margin-top: p(48);
+        @include MB576 {
+            margin-top: m375(40);
+        }
     }
 }

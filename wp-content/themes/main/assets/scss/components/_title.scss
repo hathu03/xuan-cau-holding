@@ -2,12 +2,28 @@
     &.center {
         text-align: center;
     }
+    &.center-m {
+        @include MB576 {
+            text-align: center;
+        }
+    }
     p {
         font-family: "sofia-semibold.ttf";
         font-size: p(12);
         line-height: p(22);
         text-transform: uppercase;
         color: #BB1A21;
+        margin-bottom: p(4);
+        @include MB {
+            font-size: m(8);
+            line-height: m(18);
+            margin-bottom: m(2);
+        }
+        @include MB576 {
+            font-size: m375(12);
+            line-height: m375(22);
+            margin-bottom: m375(4);
+        }
     }
     h2 {
         font-family: "utm-alter-gothic.ttf";
@@ -15,5 +31,13 @@
         line-height: p(50);
         text-transform: uppercase;
         color: rgba(0, 0, 0, 0.85);
+        @include MB {
+            font-size: m(22);
+            line-height: m(25);
+        }
+        @include MB576 {
+            font-size: m375(36);
+            line-height: m375(44);
+        }
     }
 }

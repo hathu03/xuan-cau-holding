@@ -1,6 +1,6 @@
 <div class="typography h-section-3">
     <div class="title-box">
-        <div class="tw-title">
+        <div class="tw-title center-m">
             <p>Xuân Cầu Holding</p>
             <h2>Lĩnh vực hoạt động</h2>
         </div>
@@ -14,8 +14,10 @@
                             <img src="<?php echo THEME_ASSETS . '/images/homes/s3-img-1.jpg' ?>" alt="Năng lượng Tái Tạ0">
                         </div>
                         <div class="info">
-                            <p><?php echo $i + 1 >= 10 ? $i + 1 : '0'.($i + 1) ?>.</php>
-                            <h3>Năng lượng Tái Tạo <?php echo $i ?></h3>
+                            <div class="info-label">
+                                <p><?php echo $i + 1 >= 10 ? $i + 1 : '0'.($i + 1) ?>.</php>
+                                <h3>Năng lượng Tái Tạo <?php echo $i ?></h3>
+                            </div>
                             <img class="icon-plus" width="22px" height="22px" src="<?php echo THEME_ASSETS . '/images/commons/icon-plus.svg' ?>" alt="icon+plus">
                         </div>
                     </a>

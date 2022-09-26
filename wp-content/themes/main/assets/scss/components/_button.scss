@@ -71,9 +71,29 @@
     line-height: p(20);
     font-family: "utm-alter-gothic.ttf";
     color: rgba(0, 0, 0, 0.65);
+    @include MB {
+        font-size: m(9);
+        line-height: m(14.3);
+    }
+    @include MB576 {
+        font-size: m375(18);
+        line-height: m375(20);
+    }
     img{
-        margin-right: 8px;
+        margin-right: p(8);
         transition: .3s;
+        width: p(22);
+        height: p(22);
+        @include MB {
+            margin-right: m(4);
+            width: m(13);
+            height: m(13);
+        }
+        @include MB576 {
+            margin-right: m375(8);
+            width: m375(22);
+            height: m375(22);
+        }
     }
     &:hover{
         img{
@@ -97,7 +117,17 @@
     border-color: #BB1A21;
     box-shadow: 0 0 40px 40px #BB1A21 inset, 0 0 0 0 #BB1A21;
     transition: all 150ms ease-in-out;
+    @include MB {
+        font-size: m(9);
+        line-height: m(12);
+        padding: m(5) m(24);
+    }
 
+    @include MB576 {
+        font-size: m375(16);
+        line-height: m375(26);
+        padding: m375(9) m375(62);
+    }
     &:hover {
         box-shadow: 0 0 2px 0 #bb1a21 inset, 0 0 10px 4px #bb1a21;
         color: #BB1A21;

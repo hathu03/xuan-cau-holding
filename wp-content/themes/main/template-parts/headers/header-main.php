@@ -30,9 +30,7 @@
             </ul>
         </div>
         <div class="hamburger">
-            <span></span>
-            <span></span>
-            <span></span>
+            <img width="20px" height="20px" src="<?php echo THEME_ASSETS . '/images/commons/icon-hamburger.svg' ?>" alt="icon+hamburger">
         </div>
     </div>
 </div>

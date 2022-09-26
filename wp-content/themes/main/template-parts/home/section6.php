@@ -3,8 +3,8 @@
         <div class="tw-wrapper">
             <div class="context">
                 <div class="tw-title center">
-                    <p>Về chúng tôi</p>
-                    <h2>Xuân cầu Holdings</h2>
+                    <p>Xuân cầu holdings</p>
+                    <h2>Các công ty thành viên</h2>
                 </div>
                 <div class="logo-partner">
                     <?php
@@ -13,10 +13,7 @@
                     <div class="logo-item">
                         <img width="140px" height="140px" src="<?php echo THEME_ASSETS . '/images/homes/partner.jpg' ?>" alt="logo+partner">
                     </div>
-                    <?php
-                            
-                        }
-                    ?>
+                    <?php } ?>
                 </div>
             </div>
         </div>

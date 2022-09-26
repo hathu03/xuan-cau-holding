@@ -52,6 +52,10 @@
                     font-size: m(94);
                     line-height: m(118);
                 }
+                @include MB576 {
+                    font-size: m375(94);
+                    line-height: m375(118);
+                }
             }
             .text-small{
                 font-size: p(60);
@@ -62,6 +66,11 @@
                     font-size: m(28);
                     line-height: m(30);
                     margin-top: m(-15);
+                }
+                @include MB576 {
+                    font-size: m375(28);
+                    line-height: m375(30);
+                    margin-top: m375(-15);
                 }
             }
         }

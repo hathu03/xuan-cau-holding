@@ -11,7 +11,10 @@
         padding: 0 m(30);
     }
     @include MB768 {
-        height: m(45);
+        height: m(50);
+    }
+    @include MB576 {
+        height: m375(60);
     }
     .main-logo{
         a{
@@ -20,6 +23,12 @@
                 width: p(60);
                 @include MB {
                     width: m(35);
+                }
+                @include MB768 {
+                    width: m(45);
+                }
+                @include MB576 {
+                    width: m375(56);
                 }
             }
         }
@@ -93,11 +102,16 @@
             cursor: pointer;
             img{
                 width: p(20);
+                display: block;
                 @include MB {
                     width: m(10.5);
                 }
                 @include MB768 {
                     width: m(14);
+                }
+                @include MB576 {
+                    width: m375(14);
+                    margin-right: m375(6);
                 }
             }
         }
@@ -126,14 +140,23 @@
                         font-size: m(11);
                         line-height: m(13)
                     }
+                    @include MB576 {
+                        font-size: m375(10);
+                        line-height: m375(14);
+                        margin-right: m375(4);
+                    }
                 }
                 img{
                     width: p(6);
+                    display: block;
                     @include MB {
                         width: m(5);
                     }
                     @include MB768 {
                         width: m(6);
+                    }
+                    @include MB576 {
+                        width: m375(4);
                     }
                 }
             }
@@ -180,24 +203,22 @@
 
         .hamburger {
             display: none;
+            img {
+                display: block;
+            }
             @include MB768 {
                 display: block;
                 margin-left: p(24);
-                width: m(23);
-                padding: m(2);
-                display: flex;
-                flex-direction: column;
-                align-items: flex-end;
-                span {
-                    width: 100%;
-                    height: 2.5px;
-                    display: block;
-                    background: rgba(0, 0, 0, 0.85);
-                    margin-bottom: p(8.5);
-                    &:last-child {
-                        margin-bottom: 0;
-                        width: 55%;
-                    }
+                img {
+                    width: m(20);
+                    height: m(20);
+                }
+            }
+            @include MB576 {
+                margin-left: m375(15);
+                img {
+                    width: m375(20);
+                    height: m375(20);
                 }
             }
         }

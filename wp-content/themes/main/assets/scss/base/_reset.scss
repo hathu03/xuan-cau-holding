@@ -74,6 +74,14 @@ body {
     line-height: p(26);
     color: rgba(0, 0, 0, 0.65);
     background-color: #ffffff;
+    @include MB {
+        font-size: m(9);
+        line-height: m(14.3);
+    }
+    @include MB576 {
+        font-size: m375(16);
+        line-height: m375(26);
+    }
 }
 
 .site-container {

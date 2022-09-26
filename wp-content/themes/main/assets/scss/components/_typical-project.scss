@@ -1,10 +1,17 @@
 .typical-project-item {
-    width: p(384);
+    min-width: p(384);
     height: p(420);
+    max-width: 100%;
     background-color: #BB1A21;
     display: block;
     position: relative;
     overflow: hidden;
+    @include MB768 {
+        height: m(200);
+    }
+    @include MB576 {
+        height: m375(420);
+    }
     &:hover{
         img.icon-plus {
             transform: rotate(180deg);
@@ -25,18 +32,59 @@
         padding: p(22) p(24);
         color: #ffffff;
         font-family: "sofia-bold.ttf";
-        p {
-            font-size: p(20);
-            line-height: p(28);
-            margin-bottom: p(4);
+        @include MB576 {
+            padding: m375(24);
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: flex-end;
         }
-        h3 {
-            font-size: p(24);
-            line-height: p(32);
+        .info-label {
             margin-bottom: p(16);
+            @include MB576 {
+                margin-bottom: 0;
+                width: 100vw - m375(150);
+            }
+            p {
+                font-size: p(20);
+                line-height: p(28);
+                margin-bottom: p(4);
+                @include MB {
+                    font-size: m(10);
+                    line-height: m(14);
+                }
+                @include MB576 {
+                    font-size: m375(20);
+                    line-height: m375(28);
+                    margin-bottom: m375(4);
+                }
+            }
+            h3 {
+                font-size: p(24);
+                line-height: p(32);
+                
+                @include MB {
+                    font-size: m(12);
+                    line-height: m(18);
+                }
+                @include MB576 {
+                    font-size: m375(24);
+                    line-height: m375(32);
+                }
+            }
         }
         img.icon-plus {
             transition: .3s;
+            width: p(22);
+            height: p(22);
+            @include MB {
+                width: m(13);
+                height: m(13);
+            }
+            @include MB576 {
+                width: m375(33);
+                height: m375(33);
+            }
         }
     }
     &::before{

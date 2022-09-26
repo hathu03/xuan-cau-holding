@@ -1,6 +1,9 @@
 .tw-news-item {
     width: 100%;
     max-width: p(384);
+    @include MB576 {
+        max-width: 100%;
+    }
     &:hover {
         .title {
             color: #BB1A21;
@@ -16,6 +19,14 @@
         height: p(246);
         margin-bottom: p(16);
         overflow: hidden;
+        @include MB {
+            height: m(130);
+            margin-bottom: m(10);
+        }
+        @include MB576 {
+            height: m375(220);
+            margin-bottom: m375(16);
+        }
         .image {
             width: 100%;
             height: 100%;
@@ -36,6 +47,16 @@
         mix-blend-mode: normal;
         margin-bottom: p(8);
         transition: .3s;
+        @include MB {
+            font-size: m(10);
+            line-height: m(13);
+            margin-bottom: m(4);
+        }
+        @include MB576 {
+            font-size: m375(18);
+            line-height: m375(26);
+            margin-bottom: m375(8);
+        }
     }
     .publish-time {
         font-family: "sofia-light.ttf";
@@ -43,10 +64,27 @@
         line-height: p(22);
         color: #A6A6A6;
         @include flexBox(center, flex-start, row);
+        @include MB {
+            font-size: m(8);
+            line-height: m(10);
+        }
+        @include MB576 {
+            font-size: m375(14);
+            line-height: m375(22);
+        }
         img {
             width: p(14);
             height: p(14);
             margin-right: p(8);
+            @include MB {
+                width: m(8.5);
+                height: m(8.5);
+            }
+            @include MB576 {
+                width: m375(14);
+                height: m375(14);
+                margin-right: m375(8);
+            }
         }
     }
 
@@ -55,6 +93,16 @@
             font-size: p(16);
             line-height: p(24);
             margin-bottom: p(4);
+            @include MB {
+                font-size: m(9);
+                line-height: m(12);
+                margin-bottom: m(2);
+            }
+            @include MB576 {
+                font-size: m375(16);
+                line-height: m375(24);
+                margin-bottom: m375(4);
+            }
         }
     }
 }
@@ -64,6 +112,9 @@
         padding: p(12) 0 p(8);
         border-bottom: 1px solid #C4C4C4;
         display: block  ;
+        @include MB576 {
+            padding: m375(8) 0;
+        }
         &:first-child {
             padding-top: 0;
         }
@@ -74,5 +125,8 @@
     .swiper-pagination {
         position: relative;
         margin-top: p(48);
+        @include MB576 {
+            margin-top: m375(30);
+        }
     }
 }

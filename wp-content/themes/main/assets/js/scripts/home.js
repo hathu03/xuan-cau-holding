@@ -11,8 +11,7 @@ jQuery(document).ready(function($) {
 
     // SS3 - swiper-activity-list
     new Swiper("#swiper-activity-list .swiper", {
-        slidesPerView: 5,
-        spaceBetween: 0,
+        slidesPerView: 1,
         loop: true,
         pagination: {
             el: "#swiper-activity-list .swiper-pagination",
@@ -22,15 +21,31 @@ jQuery(document).ready(function($) {
             nextEl: "#swiper-activity-list .swiper-button-next",
             prevEl: "#swiper-activity-list .swiper-button-prev",
         },
+        breakpoints: {
+            1280: {
+                slidesPerView: 5,
+            },
+            992: {
+                slidesPerView: 4,
+            },
+            576: {
+                slidesPerView: 3,
+            }
+        }
     });
 
     // SS5 - Featured news
     new Swiper("#swiper-featured-news .swiper", {
-        slidesPerView: 2,
+        slidesPerView: 1,
         spaceBetween: 24,
         pagination: {
             el: "#swiper-featured-news .swiper-pagination",
             clickable: true,
         },
+        breakpoints: {
+            576.1: {
+                slidesPerView: 2,
+            }
+        }
     });
 })

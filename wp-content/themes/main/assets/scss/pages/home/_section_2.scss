@@ -3,6 +3,10 @@
     min-height: p(676);
     padding: p(160) 0;
     position: relative;
+    @include MB576 {
+        min-height: m375(800);
+        padding: m375(80) 0 m375(412)
+    }
     img.s2-bg{
         @include position;
         width: 100%;
@@ -16,11 +20,28 @@
         .context{
             width: 100%;
             @include flexBox(flex-start, space-between, row);
+            @include MB576 {
+                justify-content: flex-start;
+                flex-direction: column;
+            }
             .left {
                 width: p(280);
+                @include MB {
+                    width: m(170);
+                }
+                @include MB576 {
+                    width: 100%;
+                    margin-bottom: m375(24);
+                }
             }
             .right {
                 width: p(740);
+                @include MB {
+                    width: m(320);
+                }
+                @include MB576 {
+                    width: 100%;
+                }
             }
         }
     }
