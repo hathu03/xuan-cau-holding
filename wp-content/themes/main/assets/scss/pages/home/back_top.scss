@@ -1,0 +1,32 @@
+.button_back_top {
+  display: none;
+  .back_top {
+    position: fixed;
+    background: #bb1a21;
+    width: p(35);
+    height: p(35);
+    bottom: p(40);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    right: p(28);
+    z-index: 10;
+    @media (max-width: 820px) {
+      width: p(40);
+      height: p(40);
+    }
+    @media (max-width: 576px) {
+      width: p(90);
+      height: p(90);
+    }
+    img {
+      width: p(16);
+      @media (max-width: 820px) {
+        width: p(18);
+      }
+      @media (max-width: 576px) {
+        width: p(40);
+      }
+    }
+  }
+}

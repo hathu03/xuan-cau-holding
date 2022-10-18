@@ -1,226 +1,259 @@
 .main-header {
-    @include position(fixed, 0, 0, auto, 0);
-    height: p(70);
-    background-color: #ffffff;
-    box-shadow: 0px 20px 8px rgba(0, 0, 0, 0.01), 0px 11px 7px rgba(0, 0, 0, 0.03), 0px 5px 5px rgba(0, 0, 0, 0.04), 0px 1px 3px rgba(0, 0, 0, 0.05), 0px 0px 0px rgba(0, 0, 0, 0.05);
-    z-index: 100;
-    padding: 0 p(60);
-    @include flexBox(center, space-between, row);
-    @include MB {
-        height: m(40);
-        padding: 0 m(30);
+  @include position(fixed, 0, 0, auto, 0);
+  height: p(70);
+  background-color: #ffffff;
+  box-shadow: 0px 20px 8px rgba(0, 0, 0, 0.01), 0px 11px 7px rgba(0, 0, 0, 0.03),
+    0px 5px 5px rgba(0, 0, 0, 0.04), 0px 1px 3px rgba(0, 0, 0, 0.05),
+    0px 0px 0px rgba(0, 0, 0, 0.05);
+  z-index: 100;
+  padding: 0 p(60);
+  //   position: relative;
+  @include flexBox(center, space-between, row);
+  @include MB {
+    height: m(40);
+    padding: 0 m(30);
+  }
+  @include MB768 {
+    height: m(50);
+  }
+  @include MB576 {
+    height: m375(60);
+  }
+  .main-logo {
+    a {
+      display: inline-block;
+      img {
+        width: p(60);
+        @include MB {
+          width: m(35);
+        }
+        @include MB768 {
+          width: m(45);
+        }
+        @include MB576 {
+          width: m375(56);
+        }
+      }
     }
+  }
+  .main-menu {
+    height: 100%;
     @include MB768 {
-        height: m(50);
+      display: none;
+      position: fixed;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: #fff;
+      top: m(67);
     }
     @include MB576 {
-        height: m375(60);
+      top: m(90);
     }
-    .main-logo{
-        a{
-            display: inline-block;
-            img{
-                width: p(60);
-                @include MB {
-                    width: m(35);
-                }
-                @include MB768 {
-                    width: m(45);
-                }
-                @include MB576 {
-                    width: m375(56);
-                }
-            }
-        }
-    }
-    .main-menu{
+    ul {
+      display: flex;
+      @include flexBox(center, space-between, row);
+      height: 100%;
+      @include MB768 {
+        flex-direction: column;
+        height: auto;
+        align-items: flex-start;
+        padding: m(45);
+        gap: 30px;
+      }
+      @include MB576 {
+        gap: 50px;
+        margin-top: m(20);
+      }
+      li {
+        margin-right: p(45);
         height: 100%;
-        @include MB768 {
+        @include flexBox(center, center);
+        position: relative;
+        @include MB {
+          margin-right: m(16);
+        }
+        &:last-child {
+          margin-right: 0;
+        }
+        &::after {
+          content: "";
+          position: absolute;
+          bottom: 0;
+          left: 50%;
+          transform: translateX(-50%);
+          width: 0;
+          background: #bb1a21;
+          height: 0;
+          transition: 0.3s;
+          @include MB768 {
             display: none;
+          }
         }
-        ul{
-            display: flex;
-            @include flexBox(center, space-between, row);
-            height: 100%;
-            li{
-                margin-right: p(45);
-                height: 100%;
-                @include flexBox(center, center);
-                position: relative;
-                @include MB {
-                    margin-right: m(16);
-                }
-                &:last-child{
-                    margin-right: 0;
-                }
-                &::after{
-                    content: "";
-                    position: absolute;
-                    bottom: 0;
-                    left: 50%;
-                    transform: translateX(-50%);
-                    width: 0;
-                    background: #BB1A21;
-                    height: 0;
-                    transition: .3s;
-                }
-                &.current-menu-item{
-                    &::after{
-                        width: 120%;
-                        height: p(3);
-                    }
-                }
-                &:hover{
-                    &::after{
-                        width: 120%;
-                        height: p(3);
-                    }
-                }
+        &.current-menu-item {
+          &::after {
+            width: 120%;
+            height: p(3);
+          }
+        }
+        &:hover {
+          &::after {
+            width: 120%;
+            height: p(3);
+          }
+        }
 
-                a{
-                    color: rgba(0, 0, 0, 0.85);
-                    font-family: "sofia-semibold.ttf";
-                    font-size: p(15);
-                    line-height: p(22);
-                    text-transform: uppercase;
-                    @include MB {
-                        font-size: m(7);
-                        line-height: m(13);
-                    }
-                }
-            }
+        a {
+          color: rgba(0, 0, 0, 0.85);
+          font-family: "sofia-semibold.ttf";
+          font-size: p(15);
+          line-height: p(22);
+          text-transform: uppercase;
+          @include MB768 {
+            font-size: p(22) !important;
+            line-height: p(29) !important;
+          }
+          @include MB576 {
+            font-size: m(20) !important;
+          }
+          @include MB {
+            font-size: m(7);
+            line-height: m(13);
+          }
         }
+      }
     }
-    .search-language{
+  }
+  .search-language {
+    @include flexBox(center, center, row);
+    button {
+      border: none;
+      padding: 0;
+      margin: 0;
+      background: transparent;
+      margin-right: p(24);
+      cursor: pointer;
+      img {
+        width: p(20);
+        display: block;
+        @include MB {
+          width: m(10.5);
+        }
+        @include MB768 {
+          width: m(14);
+        }
+        @include MB576 {
+          width: m375(14);
+          margin-right: m375(6);
+        }
+      }
+    }
+    .language {
+      position: relative;
+      &:hover {
+        ul {
+          opacity: 1;
+          visibility: visible;
+        }
+      }
+      .flag {
         @include flexBox(center, center, row);
-        button{
-            border: none;
-            padding: 0;
-            margin: 0;
-            background: transparent;
-            margin-right: p(24);
-            cursor: pointer;
-            img{
-                width: p(20);
-                display: block;
-                @include MB {
-                    width: m(10.5);
-                }
-                @include MB768 {
-                    width: m(14);
-                }
-                @include MB576 {
-                    width: m375(14);
-                    margin-right: m375(6);
-                }
-            }
+        cursor: pointer;
+        span {
+          margin-right: p(4);
+          font-family: "sofia-semibold.ttf";
+          font-size: p(14);
+          line-height: p(22);
+          text-transform: uppercase;
+          @include MB {
+            font-size: m(7);
+            line-height: m(13);
+          }
+          @include MB768 {
+            font-size: m(11);
+            line-height: m(13);
+          }
+          @include MB576 {
+            font-size: m375(10);
+            line-height: m375(14);
+            margin-right: m375(4);
+          }
         }
-        .language{
-            position: relative;
-            &:hover {
-                ul {
-                    opacity: 1;
-                    visibility: visible
-                }
-            }
-            .flag{
-                @include flexBox(center, center, row);
-                cursor: pointer;
-                span{
-                    margin-right: p(4);
-                    font-family: "sofia-semibold.ttf";
-                    font-size: p(14);
-                    line-height: p(22);
-                    text-transform: uppercase;
-                    @include MB {
-                        font-size: m(7);
-                        line-height: m(13)
-                    }
-                    @include MB768 {
-                        font-size: m(11);
-                        line-height: m(13)
-                    }
-                    @include MB576 {
-                        font-size: m375(10);
-                        line-height: m375(14);
-                        margin-right: m375(4);
-                    }
-                }
-                img{
-                    width: p(6);
-                    display: block;
-                    @include MB {
-                        width: m(5);
-                    }
-                    @include MB768 {
-                        width: m(6);
-                    }
-                    @include MB576 {
-                        width: m375(4);
-                    }
-                }
-            }
-            ul{
-                position: absolute;
-                top: p(22.3);
-                right: 0;
-                background: #ffffff;
-                @include flexBox(flex-start, flex-start, column);
-                box-shadow: 0px 10px 12px 3px #322f2f30;
-                opacity: 0;
-                visibility: hidden;
-                transition: .3s;
-                @include MB {
-                    top: m(13.3)
-                }
-                li {
-                    a {
-                        font-family: "sofia-semibold.ttf";
-                        font-size: p(12);
-                        line-height: p(35);
-                        text-transform: uppercase;
-                        width: p(35);
-                        height: p(35);
-                        display: inline-block;
-                        text-align: center;
-                        color: rgba(0,0,0,.5);
-                        @include MB {
-                            width: m(20);
-                            height: m(20);
-                            font-size: m(7);
-                            line-height: m(20);
-                        }
-                        @include MB768 {
-                            width: m(28);
-                            height: m(28);
-                            font-size: m(10);
-                            line-height: m(28);
-                        }
-                    }
-                }
-            }
+        img {
+          width: p(6);
+          display: block;
+          @include MB {
+            width: m(5);
+          }
+          @include MB768 {
+            width: m(6);
+          }
+          @include MB576 {
+            width: m375(4);
+          }
         }
-
-        .hamburger {
-            display: none;
-            img {
-                display: block;
+      }
+      ul {
+        position: absolute;
+        top: p(22.3);
+        right: 0;
+        background: #ffffff;
+        @include flexBox(flex-start, flex-start, column);
+        box-shadow: 0px 10px 12px 3px #322f2f30;
+        opacity: 0;
+        visibility: hidden;
+        transition: 0.3s;
+        @include MB {
+          top: m(13.3);
+        }
+        li {
+          a {
+            font-family: "sofia-semibold.ttf";
+            font-size: p(12);
+            line-height: p(35);
+            text-transform: uppercase;
+            width: p(35);
+            height: p(35);
+            display: inline-block;
+            text-align: center;
+            color: rgba(0, 0, 0, 0.5);
+            @include MB {
+              width: m(20);
+              height: m(20);
+              font-size: m(7);
+              line-height: m(20);
             }
             @include MB768 {
-                display: block;
-                margin-left: p(24);
-                img {
-                    width: m(20);
-                    height: m(20);
-                }
+              width: m(28);
+              height: m(28);
+              font-size: m(10);
+              line-height: m(28);
             }
-            @include MB576 {
-                margin-left: m375(15);
-                img {
-                    width: m375(20);
-                    height: m375(20);
-                }
-            }
+          }
         }
+      }
     }
+
+    .hamburger {
+      display: none;
+      img {
+        display: block;
+      }
+      @include MB768 {
+        display: block;
+        margin-left: p(24);
+        img {
+          width: m(20);
+          height: m(20);
+        }
+      }
+      @include MB576 {
+        margin-left: m375(15);
+        img {
+          width: m375(20);
+          height: m375(20);
+        }
+      }
+    }
+  }
 }

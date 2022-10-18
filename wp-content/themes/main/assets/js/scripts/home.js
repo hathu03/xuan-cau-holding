@@ -48,4 +48,10 @@ jQuery(document).ready(function($) {
             }
         }
     });
+
+
+
+    //library
+    new WOW().init();
+
 })

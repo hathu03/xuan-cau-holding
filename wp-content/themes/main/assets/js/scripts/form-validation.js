@@ -190,7 +190,7 @@ Validator.isNumber = (selector, message) => {
   return {
     selector,
     testing: (value) => {
-      const regex = /^[0-9]+$/;
+      // const regex = /^[0-9]+$/;
       return regex.test(value)
         ? undefined
         : message || "This field can only be entered numeric characters.";

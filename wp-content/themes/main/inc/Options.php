@@ -22,11 +22,20 @@ if( function_exists('acf_add_options_page') ) {
 
     // LDP The Origami
     acf_add_options_page(array(
-        'page_title' => 'Ldp The Origami',
-        'menu_title' => 'Ldp The Origami',
-        'menu_slug' => 'ldp-the-origami',
+        'page_title' => 'Home',
+        'menu_title' => 'Trang chủ',
+        'menu_slug' => 'home-page',
         'capability' => 'edit_posts',
-        'position' => '4',
+        'position' => '1',
+        'icon_url' => 'dashicons-admin-home',
+        'redirect'		=> false
+    ));
+    acf_add_options_page(array(
+        'page_title' => 'Project',
+        'menu_title' => 'Dự án',
+        'menu_slug' => 'product-page',
+        'capability' => 'edit_posts',
+        'position' => '1.1',
         'icon_url' => 'dashicons-admin-home',
         'redirect'		=> false
     ));

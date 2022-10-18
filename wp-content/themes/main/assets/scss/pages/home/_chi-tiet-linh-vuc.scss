@@ -1,0 +1,161 @@
+.d_section2 {
+  .post {
+    padding: p(100) p(324);
+    @media (max-width: 820px) {
+      padding: p(80) p(240);
+    }
+    @include MB576 {
+      padding: m375(30) m375(30);
+    }
+    h2 {
+      font-family: "utm-alter-gothic.ttf";
+      font-weight: 400;
+      font-size: p(40);
+      line-height: p(50);
+      text-transform: uppercase;
+      color: #262626;
+      margin-bottom: p(26);
+      margin-top: 0;
+      @include MB {
+        font-size: m(22);
+        margin-bottom: m(20);
+      }
+      @include MB576 {
+        font-size: m375(26);
+        line-height: m375(30);
+        margin-bottom: m375(15);
+      }
+    }
+    h3 {
+      font-family: "utm-alter-gothic.ttf";
+      font-weight: 400;
+      font-size: p(30);
+      line-height: p(40);
+      text-transform: uppercase;
+      color: #262626;
+      margin-bottom: p(26);
+      margin-top: 0;
+      @include MB {
+        font-size: m(18);
+        margin-bottom: m(20);
+      }
+      @include MB576 {
+        font-size: m375(22);
+        line-height: m375(26);
+        margin-bottom: m375(16);
+      }
+    }
+    h4 {
+      font-family: "utm-alter-gothic.ttf";
+      font-weight: 400;
+      font-size: p(20);
+      line-height: p(30);
+      text-transform: uppercase;
+      color: #262626;
+      margin-bottom: p(26);
+      margin-top: 0;
+      @include MB {
+        font-size: m(16);
+        margin-bottom: m(20);
+      }
+      @include MB576 {
+        font-size: m375(18);
+        line-height: m375(24);
+        margin-bottom: m375(16);
+      }
+    }
+    p {
+      font-family: "sofia-regular.ttf";
+      margin: p(15) 0;
+      font-size: p(16);
+      line-height: p(26);
+      font-weight: 400;
+      color: rgba(0, 0, 0, 0.65);
+      @include MB {
+        font-size: m(11);
+        line-height: m(18);
+        margin: m(10) 0;
+      }
+      @include MB576 {
+        font-size: m375(12);
+        line-height: m375(18);
+        margin: m375(10) 0;
+      }
+    }
+    figure {
+      margin: p(36) 0;
+      display: flex;
+      @include MB {
+        margin: m(20) 0;
+      }
+      @include MB576 {
+        margin: m375(20) 0;
+      }
+      img {
+        margin: 0 auto;
+      }
+    }
+    ul {
+      font-size: p(16);
+      margin: p(15) 0;
+      @include MB {
+        font-size: m(11);
+        line-height: m(18);
+        margin: m(10) 0;
+      }
+      @include MB576 {
+        font-size: m375(12);
+        line-height: m375(18);
+        margin: m375(10) 0;
+      }
+    }
+    ol {
+      font-size: p(16);
+      margin: p(15) 0;
+      @include MB {
+        font-size: m(11);
+        line-height: m(18);
+        margin: m(10) 0;
+      }
+      @include MB576 {
+        font-size: m375(12);
+        line-height: m375(18);
+        margin: m375(10) 0;
+      }
+    }
+    strong,
+    b {
+      font-size: p(16);
+      font-family: "sofia-semibold.ttf";
+      margin: p(15) 0;
+      display: inline-block;
+      @include MB {
+        font-size: m(11);
+        line-height: m(18);
+        margin: m(10) 0;
+      }
+      @include MB576 {
+        font-size: m375(12);
+        line-height: m375(18);
+        margin: m375(10) 0;
+      }
+    }
+    a {
+      font-size: p(16);
+      margin: p(15) 0;
+      display: inline-block;
+      text-decoration: none;
+      font-style: italic;
+      @include MB {
+        font-size: m(11);
+        line-height: m(18);
+        margin: m(10) 0;
+      }
+      @include MB576 {
+        font-size: m375(12);
+        line-height: m375(18);
+        margin: m375(10) 0;
+      }
+    }
+  }
+}

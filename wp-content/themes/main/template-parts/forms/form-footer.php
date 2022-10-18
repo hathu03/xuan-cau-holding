@@ -16,6 +16,11 @@
                 <input id="phone" name="phone" type="text">
                 <span class="form-message">Vui lòng điền đầy đủ thông tin</span>
             </div>
+            <div class="form-input">
+                <label for="content" class="form-label">Nội dung<sup>*</sup>:</label>
+                <input id="content" name="content" type="text">
+                <span class="form-message">Vui lòng điền đầy đủ thông tin</span>
+            </div>
         </div>
         <button type="submit" class="tw-button-primary" id="btn-submit-form-ft">Đăng ký</button>
     </form>

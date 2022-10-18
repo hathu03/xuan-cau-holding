@@ -11,6 +11,8 @@ get_template_part( 'template-parts/home/section6' );
 get_template_part( 'template-parts/home/section7' );
 get_template_part( 'template-parts/home/section8' );
 get_template_part( 'template-parts/home/section9' );
+get_template_part( 'template-parts/home/floating' );
+get_template_part( 'template-parts/home/back_top' );
 ?>
 <script src="<?php echo THEME_ASSETS . '/js/compressor/home.min.js' ?>"></script>
 <?php

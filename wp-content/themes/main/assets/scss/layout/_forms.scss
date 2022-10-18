@@ -1,104 +1,107 @@
 .form-ft {
+  width: 100%;
+  font-size: p(14);
+  line-height: p(21);
+  @include MB {
+    font-size: m(8);
+    line-height: m(9);
+  }
+  @include MB576 {
+    font-size: m375(16);
+    line-height: m375(24);
+  }
+  .form-ft-register {
     width: 100%;
-    font-size: p(14);
-    line-height: p(21);
-    @include MB {
-        font-size: m(8);
-        line-height: m(9);
-    }
-    @include MB576 {
-        font-size: m375(16);
-        line-height: m375(24)
-    }
-    .form-ft-register {
+    .form-group {
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      margin-bottom: p(67);
+      @include MB576 {
+        margin-bottom: m375(60);
+      }
+      .form-input {
         width: 100%;
-        .form-group {
-            width: 100%;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            margin-bottom: p(67);
-            @include MB576 {
-                margin-bottom: m375(60);
-            }
-            .form-input {
-                width: 100%;
-                display: flex;
-                flex-direction: row;
-                align-items: center;
-                position: relative;
-                margin-bottom: p(40);
-                padding-bottom: p(8);
-                border-bottom: 1px solid rgba(255, 255, 255, 0.25);
-                @include MB576 {
-                    margin-bottom: m375(40);
-                }
-                &.invalid {
-                    span.form-message {
-                        color: #d72027;
-                        display: inline;
-                    }
-                }
-                label.form-label {
-                    white-space: nowrap;
-                    margin-right: p(10);
-                    @include MB576 {
-                        margin-right: m375(10);
-                    }
-                }
-                input {
-                    width: 100%;
-                    background-color: transparent;
-                    border: none;
-                    color: #ffffff;
-                    height: p(26);
-                    margin-top: p(3);
-                    font-size: p(14);
-                    line-height: p(21);
-                    @include MB {
-                        font-size: m(8);
-                        line-height: m(9);
-                        height: m(14);
-                    }
-                    @include MB576 {
-                        font-size: m375(16);
-                        line-height: m375(24);
-                        height: m375(24);
-                        margin-top: m375(4);
-                    }
-                }
-                span.form-message {
-                    position: absolute;
-                    right: 0;
-                    bottom: p(-24);
-                    font-size: p(12);
-                    line-height: p(18);
-                    font-style: italic;
-                    font-family: "sofia-light.ttf";
-                    display: none;
-                    @include MB576 {
-                        font-size: m375(12);
-                        line-height: m375(18);
-                        bottom: m375(-24);
-                    }
-                }
-                &:nth-of-type(2), &:nth-of-type(3) {
-                    width: p(240);
-                    margin-bottom: 0;
-                    @include MB {
-                        width: m(105);
-                    }
-                    @include MB576 {
-                        width: 100%;
-                    }
-                }
-
-                &:nth-of-type(2) {
-                    @include MB576 {
-                        margin-bottom: m375(40);
-                    }
-                }
-            }
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        position: relative;
+        margin-bottom: p(40);
+        padding-bottom: p(8);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+        @include MB576 {
+          margin-bottom: m375(40);
         }
+        &.invalid {
+          span.form-message {
+            color: #d72027;
+            display: inline;
+          }
+        }
+        label.form-label {
+          white-space: nowrap;
+          margin-right: p(10);
+          @include MB576 {
+            margin-right: m375(10);
+          }
+        }
+        input {
+          width: 100%;
+          background-color: transparent;
+          border: none;
+          color: #ffffff;
+          height: p(26);
+          margin-top: p(3);
+          font-size: p(14);
+          line-height: p(21);
+          @include MB {
+            font-size: m(8);
+            line-height: m(9);
+            height: m(14);
+          }
+          @include MB576 {
+            font-size: m375(16);
+            line-height: m375(24);
+            height: m375(24);
+            margin-top: m375(4);
+          }
+        }
+        span.form-message {
+          position: absolute;
+          right: 0;
+          bottom: p(-24);
+          font-size: p(12);
+          line-height: p(18);
+          font-style: italic;
+          font-family: "sofia-light.ttf";
+          display: none;
+          @include MB576 {
+            font-size: m375(12);
+            line-height: m375(18);
+            bottom: m375(-24);
+          }
+        }
+        &:nth-of-type(2),
+        &:nth-of-type(3) {
+          width: p(240);
+          //   margin-bottom: 0;
+          @include MB {
+            width: m(105);
+          }
+          @include MB576 {
+            width: 100%;
+          }
+        }
+        &:last-child {
+          margin-bottom: 0;
+        }
+        &:nth-of-type(2) {
+          @include MB576 {
+            margin-bottom: m375(40);
+          }
+        }
+      }
     }
+  }
 }

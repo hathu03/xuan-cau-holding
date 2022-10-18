@@ -1,0 +1,40 @@
+.container_common {
+  .content_common {
+    .floating_common {
+      // display: none;
+      z-index: 9;
+      position: fixed;
+      top: 35%;
+      right: 0;
+      display: flex;
+      flex-direction: column;
+      gap: p(1);
+      @media (max-width: 576px) {
+        top: 35%;
+        display: none;
+      }
+      .float {
+        display: flex;
+        background: #ffffff;
+        width: p(55);
+        height: p(56);
+        align-items: center;
+        @media (max-width: 820px) {
+          width: p(60);
+          height: p(62);
+        }
+        @media (max-width: 576px) {
+          width: p(40);
+          height: p(40);
+        }
+        img {
+          max-width: p(26);
+          display: flex;
+          margin: 0 auto;
+
+          animation: snakeX 1s infinite ease-in-out;
+        }
+      }
+    }
+  }
+}

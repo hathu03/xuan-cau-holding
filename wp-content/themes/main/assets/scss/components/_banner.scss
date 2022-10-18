@@ -1,0 +1,52 @@
+.bn_section {
+  .background_picture {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    @include MB576 {
+      height: 375px;
+    }
+    .background_field {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: flex;
+    }
+    .text_activity {
+      position: absolute;
+      //   bottom: p(48);
+      top: p(382);
+      width: 100%;
+      @include MB576 {
+        top: unset;
+        bottom: 48px;
+      }
+      .text_little {
+        // font-weight: 600;
+        font-size: p(14);
+        line-height: p(22);
+        text-align: center;
+        color: #ffffff;
+        margin: 0;
+        @include MB576 {
+          font-size: m375(14);
+          line-height: m375(22);
+        }
+      }
+      .text_big {
+        font-family: "utm-alter-gothic.ttf";
+        font-weight: 400;
+        font-size: p(56);
+        line-height: p(64);
+        text-align: center;
+        text-transform: uppercase;
+        color: #ffffff;
+        margin: 0;
+        @include MB576 {
+          font-size: m375(36);
+          line-height: m375(44);
+        }
+      }
+    }
+  }
+}

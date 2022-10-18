@@ -19,7 +19,8 @@
     ?>
     <h4 class="title"><?php echo $title ?></h4>
     <p class="publish-time">
-        <img width="14px" height="14px" src="<?php echo THEME_ASSETS . '/images/commons/icon-clock.svg' ?>" alt="icon+clock">
+        <img width="14px" height="14px" src="<?php echo THEME_ASSETS . '/images/commons/icon-clock.svg' ?>"
+            alt="icon+clock">
         <span><?php echo $scheduleAt ?></span>
     </p>
 </a>

@@ -64,7 +64,7 @@ if (is_paged()) {
 
     <link rel="profile" href="https://gmpg.org/xfn/11" />
     <link type="image/x-icon" rel="shortcut icon" href="<?php echo FAVICON; ?>">
-    
+
     <?php wp_head(); ?>
 </head>
 
@@ -73,5 +73,7 @@ if (is_paged()) {
     <div id="page" class="site-container">
         <header id="header-main">
             <?php get_template_part('template-parts/headers/header', 'main'); ?>
+            <?php get_template_part('template-parts/home/floating'); 
+            ?>
         </header>
         <div id="content" class="site-content">

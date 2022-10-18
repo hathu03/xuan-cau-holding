@@ -1,21 +1,21 @@
-.tw-swiper-pagination{
-    display: inline-flex;
-    justify-content: center;
+.tw-swiper-pagination {
+  display: inline-flex;
+  justify-content: center;
+  .swiper-pagination-bullet {
+    width: p(32.73);
+    height: p(3);
+    background: rgba(190, 190, 190, 0.4);
+    margin: 0 2px !important;
+    border: none;
+    border-radius: 0;
+    &.swiper-pagination-bullet-active {
+      background: #bb1a21;
+    }
+  }
+  &.tw-swiper-pagination-large {
     .swiper-pagination-bullet {
-        width: p(32.73);
-        height: p(3);
-        background: rgba(190, 190, 190, 0.4);
-        margin: 0 2px !important;
-        border: none;
-        border-radius: 0;
-        &.swiper-pagination-bullet-active {
-            background: #BB1A21;
-        }
+      margin: 0 4px !important;
+      width: p(69.82);
     }
-    &.tw-swiper-pagination-large {
-        .swiper-pagination-bullet {
-            margin: 0 4px !important;
-            width: p(69.82);
-        }
-    }
+  }
 }

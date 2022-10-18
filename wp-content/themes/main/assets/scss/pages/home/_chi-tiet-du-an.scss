@@ -1,0 +1,183 @@
+.dp_section2 {
+  .tw-container {
+    .tw-wrapper {
+      margin: p(100) 0 p(120) 0;
+      .tw-title {
+        p {
+          margin: 0;
+        }
+        h2 {
+          margin-top: p(4);
+          margin-bottom: 0;
+          @include MB {
+            margin-top: m(4);
+          }
+        }
+      }
+      .content_detail_project {
+        .post_project {
+          img {
+            padding: p(26) 0 p(10) 0;
+            display: block;
+            margin: 0 auto;
+            @include MB {
+              padding: m(26) 0 m(10) 0;
+            }
+          }
+          ul {
+            display: flex;
+            list-style-type: none;
+            gap: p(24);
+            justify-content: space-between;
+            padding: 0;
+            @media (max-width: 1024px) {
+              gap: p(40);
+            }
+            @include MB {
+              gap: m(24);
+            }
+            @include MB {
+              flex-direction: column;
+            }
+          }
+        }
+        .info_generation {
+          padding-top: p(26);
+          display: flex;
+          align-items: center;
+          gap: p(100);
+          @include MB {
+            flex-direction: column;
+          }
+          .minh_hoa {
+            width: 50%;
+            @include MB {
+              width: 100%;
+            }
+            img {
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+            }
+          }
+          .introduce {
+            width: p(486);
+            @include MB {
+              width: 100%;
+            }
+            .tw-title {
+              @include MB {
+                width: 100%;
+              }
+            }
+            ul {
+              list-style: none;
+              padding: 0;
+              margin: p(38) 0 p(24) 0;
+              @include MB {
+                margin: m(38) 0 m(24) 0;
+              }
+              li {
+                position: relative;
+                align-items: center;
+                display: flex;
+                padding-left: p(16);
+                margin: p(8) 0;
+                @media (max-width: 1024px) {
+                  justify-content: space-between;
+                }
+                @include MB {
+                  align-items: baseline;
+                  padding-left: m(16);
+                }
+                &::before {
+                  position: absolute;
+                  content: "";
+                  width: p(6);
+                  height: p(6);
+                  background: #bb1a21;
+                  border-radius: 50%;
+                  left: 0;
+                  @include MB {
+                    width: m(6);
+                    height: m(6);
+                    top: 20%;
+                  }
+                }
+                span {
+                  width: p(94);
+                  letter-spacing: -0.02em;
+                  color: #262626;
+                  font-family: "sofia-medium.ttf";
+                  //   @include MB {
+                  //     width: m(94);
+                  //   }
+                  @media (max-width: 1024px) {
+                    width: p(120);
+                  }
+                  @include MB {
+                    width: m(120);
+                  }
+                }
+                p {
+                  width: p(313);
+                  margin: 0;
+                  @include MB {
+                    width: m(313);
+                  }
+                }
+              }
+            }
+            .dif_intro {
+              display: flex;
+              flex-direction: row;
+              flex-wrap: wrap;
+              @include MB {
+                justify-content: space-between;
+              }
+              .item {
+                width: p(231);
+                margin-bottom: p(20);
+                @include MB {
+                  width: m(231);
+                  margin-bottom: m(20);
+                }
+                &:last-child {
+                  .final {
+                    font-family: "sofia-light.ttf";
+                    font-size: p(12);
+                    line-height: p(12);
+                    color: #8c8c8c;
+                    @include MB {
+                      font-size: m(12);
+                      line-height: m(12);
+                    }
+                  }
+                }
+                p {
+                  margin: 0;
+                  font-family: "sofia-medium.ttf";
+                  font-size: p(14);
+                  @include MB {
+                    font-size: m(14);
+                  }
+                }
+                h2 {
+                  font-family: "sofia-bold.ttf";
+                  margin: 0;
+                  color: #bb1a21;
+                  font-size: p(36);
+                  line-height: p(50);
+                  @include MB {
+                    font-size: m(36);
+                    line-height: m(50);
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

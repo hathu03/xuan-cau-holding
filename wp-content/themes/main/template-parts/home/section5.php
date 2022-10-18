@@ -17,20 +17,24 @@
         'ignore_sticky_posts' => true,  
     ));
 ?>
-<div class="typography h-section-5">
+<div class="typography h-section-5" id="tin-tuc">
     <div class="tw-container">
         <div class="tw-wrapper">
             <div class="context">
                 <div class="h-news-header">
-                    <div class="tw-title">
+                    <div class="tw-title animate__animated animate__rotateIn animate__delay-2s wow rotateIn"
+                        data-wow-duration="1s" data-wow-delay="0s">
                         <h2>Tin tức</h2>
                     </div>
-                    <a href="#" class="tw-button-primary">
+                    <a href="#"
+                        class="tw-button-primary animate__animated animate__flipInY animate__delay-2s wow flipInY"
+                        data-wow-duration="2s" data-wow-delay="0s">
                         <span>Xem tất cả</span>
                     </a>
                 </div>
                 <div class="h-news-content">
-                    <div class="featured-news">
+                    <div class="featured-news animate__animated animate__fadeInLeft animate__delay-2s wow slideInLeft"
+                        data-wow-duration="2s" data-wow-delay="-1s">
                         <h3 class="label">Tin nổi bật</h3>
                         <div class="list-featured">
                             <?php
@@ -47,7 +51,8 @@
                             ?>
                         </div>
                     </div>
-                    <div class="latest-news">
+                    <div class="latest-news animate__animated animate__fadeInRight animate__delay-2s wow slideInRight"
+                        data-wow-duration="2s" data-wow-delay="-1s">
                         <h3 class="label">Tin mới nhất</h3>
                         <div class="list-latest">
                             <?php

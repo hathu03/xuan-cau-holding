@@ -15,11 +15,15 @@
                                 <p class="address">Tầng 18 VCCI, 09 Đào Duy Anh, Đống Đa, Hà Nội</p>
                                 <div class="phone-fax">
                                     <p>
-                                        <img width="12px" height="12px" src="<?php echo THEME_ASSETS . '/images/commons/icon-phone-outline.svg' ?>" alt="icon-phone">
+                                        <img width="12px" height="12px"
+                                            src="<?php echo THEME_ASSETS . '/images/commons/icon-phone-outline.svg' ?>"
+                                            alt="icon-phone">
                                         <a href="tel:(+84) 24 3747 5268">(+84) 24 3747 5266</a>
                                     </p>
                                     <p>
-                                        <img width="12px" height="12px" src="<?php echo THEME_ASSETS . '/images/commons/icon-fax-outline.svg' ?>" alt="icon-phone">
+                                        <img width="12px" height="12px"
+                                            src="<?php echo THEME_ASSETS . '/images/commons/icon-fax-outline.svg' ?>"
+                                            alt="icon-phone">
                                         <a href="tel:(+84) 24 3747 5268">(+84) 24 3747 5266</a>
                                     </p>
                                 </div>
@@ -29,11 +33,15 @@
                                 <p class="address">111A Pasteur, Tòa nhà Sailing, tầng 15, P. Bến Nghé, Q.1, Tp. HCM</p>
                                 <div class="phone-fax">
                                     <p>
-                                        <img width="12px" height="12px" src="<?php echo THEME_ASSETS . '/images/commons/icon-phone-outline.svg' ?>" alt="icon-phone">
+                                        <img width="12px" height="12px"
+                                            src="<?php echo THEME_ASSETS . '/images/commons/icon-phone-outline.svg' ?>"
+                                            alt="icon-phone">
                                         <a href="tel:(+84) 28 3512 3288">(+84) 28 3512 3288</a>
                                     </p>
                                     <p>
-                                        <img width="12px" height="12px" src="<?php echo THEME_ASSETS . '/images/commons/icon-fax-outline.svg' ?>" alt="icon-phone">
+                                        <img width="12px" height="12px"
+                                            src="<?php echo THEME_ASSETS . '/images/commons/icon-fax-outline.svg' ?>"
+                                            alt="icon-phone">
                                         <a href="tel:(+84) 28 3512 3288">(+84) 28 3512 3288</a>
                                     </p>
                                 </div>
@@ -46,17 +54,17 @@
                                     <li><a href="#">Hướng dẫn</a></li>
                                 </ul>
                             </div>
-                            <div class="contact-item">
-                                <p class="label">Tuyển dụng</p>
+                            <div class="contact-item" id="tuyen-dung">
+                                <p class="label">Kết nối với chúng tôi</p>
                                 <div class="social">
                                     <a href="#" target="_blank">
-                                        <img width="32px" height="32px" src="<?php echo THEME_ASSETS . '/images/commons/icon-fb-white-inline.svg' ?>" alt="icon-fb-inline">
+                                        <i class="fa-brands fa-facebook-f"></i>
                                     </a>
                                     <a href="#" target="_blank">
-                                        <img width="32px" height="32px" src="<?php echo THEME_ASSETS . '/images/commons/icon-twitter-white-inline.svg' ?>" alt="icon-twitter-inline">
+                                        <i class="fa-brands fa-twitter"></i>
                                     </a>
                                     <a href="#" target="_blank">
-                                        <img width="32px" height="32px" src="<?php echo THEME_ASSETS . '/images/commons/icon-youtube-white-inline.svg' ?>" alt="icon-youtube-inline">
+                                        <i class="fa-brands fa-youtube"></i>
                                     </a>
                                 </div>
                             </div>
@@ -70,3 +78,5 @@
         <p>Designed and Developed by <a href="http://twinger.vn/" target="_blank">Twinger</a></p>
     </div>
 </div>
+<script>
+</script>
