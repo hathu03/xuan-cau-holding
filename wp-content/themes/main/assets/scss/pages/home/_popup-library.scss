@@ -1,0 +1,105 @@
+.bgr_popup {
+  background: rgba(0, 0, 0, 0.65);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  //   transition: 0.5s;
+  .overview {
+    padding-top: p(5);
+    width: p(1176);
+    height: p(612);
+    display: flex;
+    margin: 0 auto;
+    position: relative;
+    opacity: 1;
+    transform: scale(1);
+    transition: 0.5s;
+    .popup_close {
+      position: absolute;
+      top: -21px;
+      right: 0;
+      width: p(18);
+      height: p(18);
+      cursor: pointer;
+      z-index: 999;
+      filter: invert(1);
+      @include MB576 {
+        top: -14px;
+        right: -14px;
+        width: m375(10);
+        height: m375(10);
+      }
+    }
+    .slide_image {
+      .gallery_slide_js_popup {
+        width: p(1176);
+        height: p(612);
+        .swiper-wrapper {
+          .swiper-slide {
+            width: p(1176);
+            height: p(612);
+            overflow: hidden;
+            img {
+              width: p(1088);
+              height: p(612);
+              object-fit: cover;
+              object-position: center;
+              display: block;
+              margin: 0 auto;
+              @media (max-width: 1024px) {
+                width: p(1058);
+                height: p(582);
+              }
+              @include MB576 {
+                width: 100%;
+                height: 100%;
+              }
+            }
+          }
+        }
+        .swiper-button-next,
+        .swiper-button-prev {
+          @include MB576 {
+            width: m375(15);
+          }
+          &::after {
+            color: #bfbfbf;
+            font-size: p(16);
+            @include MB576 {
+              font-size: m375(10);
+            }
+          }
+        }
+        .swiper-button-next {
+          @include MB576 {
+            right: 0;
+          }
+        }
+        .swiper-button-prev {
+          @include MB576 {
+            left: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+.show_popup {
+  opacity: 0;
+  pointer-events: none;
+  transform: scale(0);
+  transition: 0.5s;
+  .overview {
+    opacity: 0;
+    transform: scale(0);
+    pointer-events: none;
+    transition: 0.5s;
+  }
+}

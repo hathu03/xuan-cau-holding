@@ -1,3 +1,13 @@
+<?php
+$footer = get_field('footer', 'option');
+$label = $footer['label'];
+$head_quater = $footer['head_quater'];
+$branch = $footer['branch'];
+$connect = $footer['connect'];
+$recruit = $footer['recruit'];
+$request = $recruit['request'];
+?>
+
 <div class="typography footer-main">
     <div class="ft">
         <div class="tw-container">
@@ -8,50 +18,51 @@
                         <?php get_template_part( 'template-parts/forms/form', 'footer' ); ?>
                     </div>
                     <div class="contact">
-                        <h4 class="title">Thông tin liên hệ</h4>
+                        <h4 class="title"><?= $label ?></h4>
                         <div class="info">
                             <div class="contact-item">
-                                <p class="label">Trụ sở Hà Nội</p>
-                                <p class="address">Tầng 18 VCCI, 09 Đào Duy Anh, Đống Đa, Hà Nội</p>
+                                <p class="label"><?= $head_quater['name'] ?></p>
+                                <p class="address"><?= $head_quater['address'] ?></p>
                                 <div class="phone-fax">
                                     <p>
                                         <img width="12px" height="12px"
                                             src="<?php echo THEME_ASSETS . '/images/commons/icon-phone-outline.svg' ?>"
                                             alt="icon-phone">
-                                        <a href="tel:(+84) 24 3747 5268">(+84) 24 3747 5266</a>
+                                        <a href="tel:<?= $head_quater['phone'] ?>"><?= $head_quater['phone'] ?></a>
                                     </p>
                                     <p>
                                         <img width="12px" height="12px"
                                             src="<?php echo THEME_ASSETS . '/images/commons/icon-fax-outline.svg' ?>"
                                             alt="icon-phone">
-                                        <a href="tel:(+84) 24 3747 5268">(+84) 24 3747 5266</a>
+                                        <a href="tel:<?= $head_quater['fax'] ?>"><?= $head_quater['fax'] ?></a>
                                     </p>
                                 </div>
                             </div>
                             <div class="contact-item">
-                                <p class="label">Chi nhánh Tp. HCM</p>
-                                <p class="address">111A Pasteur, Tòa nhà Sailing, tầng 15, P. Bến Nghé, Q.1, Tp. HCM</p>
+                                <p class="label"><?= $branch['name'] ?></p>
+                                <p class="address"><?= $branch['address'] ?></p>
                                 <div class="phone-fax">
                                     <p>
                                         <img width="12px" height="12px"
                                             src="<?php echo THEME_ASSETS . '/images/commons/icon-phone-outline.svg' ?>"
                                             alt="icon-phone">
-                                        <a href="tel:(+84) 28 3512 3288">(+84) 28 3512 3288</a>
+                                        <a href="tel:<?= $branch['phone'] ?>"><?= $branch['phone'] ?></a>
                                     </p>
                                     <p>
                                         <img width="12px" height="12px"
                                             src="<?php echo THEME_ASSETS . '/images/commons/icon-fax-outline.svg' ?>"
                                             alt="icon-phone">
-                                        <a href="tel:(+84) 28 3512 3288">(+84) 28 3512 3288</a>
+                                        <a href="tel:<?= $branch['fax'] ?>"><?= $branch['fax'] ?></a>
                                     </p>
                                 </div>
                             </div>
                             <div class="contact-item">
-                                <p class="label">Tuyển dụng</p>
+                                <p class="label"><?= $recruit['name'] ?></p>
                                 <ul>
+
+                                    <li><a href="#">Môi trường làm việc</a></li>
                                     <li><a href="#">Vị trí tuyển dụng</a></li>
-                                    <li><a href="#">Chính sách quyền lợi</a></li>
-                                    <li><a href="#">Hướng dẫn</a></li>
+
                                 </ul>
                             </div>
                             <div class="contact-item" id="tuyen-dung">

@@ -39,6 +39,24 @@ if( function_exists('acf_add_options_page') ) {
         'icon_url' => 'dashicons-admin-home',
         'redirect'		=> false
     ));
+    acf_add_options_page(array(
+        'page_title' => 'Introduce',
+        'menu_title' => 'Giới thiệu',
+        'menu_slug' => 'intro-page',
+        'capability' => 'edit_posts',
+        'position' => '1.2',
+        'icon_url' => 'dashicons-admin-home',
+        'redirect'		=> false
+    ));
+    acf_add_options_page(array(
+        'page_title' => 'General',
+        'menu_title' => 'Thông tin chung',
+        'menu_slug' => 'general-page',
+        'capability' => 'edit_posts',
+        'position' => '2',
+        'icon_url' => 'dashicons-admin-generic',
+        'redirect'		=> false
+    ));
     acf_add_options_sub_page(array(
         'page_title' 	=> 'Library',
         'menu_title'	=> 'Library',

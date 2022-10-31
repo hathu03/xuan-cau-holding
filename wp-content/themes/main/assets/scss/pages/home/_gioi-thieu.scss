@@ -1,0 +1,216 @@
+.introduce {
+  position: relative;
+  background: #fff;
+  padding-top: p(140);
+  img {
+    width: 100%;
+    display: block;
+  }
+  .introduce_content {
+    position: absolute;
+    top: p(120);
+    left: p(120);
+    width: p(690);
+    .tw-title {
+      margin-bottom: p(48);
+      h2 {
+        margin: 0;
+      }
+    }
+    .slogan {
+      margin-top: p(30);
+      color: #494a4f;
+      font-size: p(18);
+      span {
+        color: #bb1a21;
+      }
+    }
+  }
+}
+.vision_mission {
+  .flex_tn_sm {
+    display: flex;
+    gap: p(10);
+    margin: p(10) 0;
+    .tn_sm {
+      position: relative;
+      width: p(715);
+      height: p(420);
+      overflow: hidden;
+      &::before {
+        position: absolute;
+        content: "";
+        width: 100%;
+        background: linear-gradient(
+          180deg,
+          rgba(0, 0, 0, 0) 32.98%,
+          rgba(0, 0, 0, 0.578125) 96.75%,
+          #000000 190.12%
+        );
+        height: 100%;
+      }
+      &:nth-child(2) {
+        .content {
+          right: p(120);
+          .title {
+            text-align: end;
+          }
+        }
+      }
+      img {
+        width: 100%;
+        object-fit: cover;
+        object-position: center;
+      }
+      .content {
+        position: absolute;
+        bottom: p(35);
+        right: p(58);
+        .title {
+          color: #fff;
+          text-transform: capitalize;
+          font-weight: 700;
+          font-size: p(24);
+          line-height: p(32);
+          margin-bottom: p(12);
+        }
+        .excerpt {
+          max-width: p(537);
+          font-weight: 400;
+          font-size: p(16);
+          line-height: p(26);
+          letter-spacing: -0.01em;
+          color: rgba(255, 255, 255, 0.85);
+        }
+      }
+    }
+  }
+}
+.value {
+  .wrap_block_value {
+    position: relative;
+    img {
+      width: 100%;
+      display: block;
+    }
+    .core_value {
+      position: absolute;
+      top: p(60);
+      right: p(120);
+      left: p(120);
+      bottom: p(60);
+      background: rgba(0, 0, 0, 0.7);
+      backdrop-filter: blur(5px);
+      .label {
+        color: #fff;
+        font-size: p(24);
+        font-weight: 700;
+        text-transform: capitalize;
+        text-align: center;
+        margin-top: p(50);
+      }
+      ._item_wrap {
+        padding: p(28) p(102) 0;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        .item {
+          width: p(282);
+          margin-right: p(75);
+          margin-bottom: p(18);
+          &:nth-child(3n) {
+            margin-right: 0;
+          }
+          &:nth-child(4n),
+          &:nth-child(5n),
+          &:nth-child(6n) {
+            margin-bottom: 0;
+            width: p(333);
+          }
+          img {
+            max-width: p(60);
+            max-height: p(60);
+            display: block;
+            margin: 0 auto;
+          }
+          .title {
+            color: #ffffff;
+            text-align: center;
+            text-transform: uppercase;
+            font-weight: 600;
+            font-size: p(16);
+          }
+          .excerpt {
+            color: #ffffff;
+            text-align: center;
+            font-weight: 400;
+            font-size: p(14);
+            line-height: p(26);
+            opacity: 0.8;
+          }
+        }
+      }
+    }
+  }
+}
+.development_history {
+  .historis {
+    padding: p(120) 0;
+    .tw-title {
+      h2 {
+        margin: 0;
+      }
+      p {
+        margin: 0;
+      }
+    }
+    .block_slide_js {
+      margin-top: p(70);
+      .swiper-wrapper {
+        text-align: baseline !important;
+        .swiper-slide {
+          width: auto;
+          p {
+            font-family: "utm-alter-gothic.ttf";
+            font-size: p(40);
+            line-height: p(120);
+            text-align: center;
+            color: rgba(44, 45, 49, 0.45);
+            transition: 0.5s;
+            margin: 0;
+          }
+          &.swiper-slide-active {
+            p {
+              color: #262626;
+              font-weight: 400;
+              font-size: p(96);
+              line-height: p(120);
+              margin: 0;
+              transition: 0.5s;
+            }
+          }
+          &.swiper-slide-prev,
+          &.swiper-slide-next {
+            p {
+              font-size: p(64);
+              line-height: p(120);
+              color: rgba(44, 45, 49, 0.65);
+              transition: 0.5s;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.award {
+  position: relative;
+  img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+  }
+}
